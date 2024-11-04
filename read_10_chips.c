@@ -23,7 +23,7 @@ Revised: 11/4/2024
 #include <inttypes.h>
 #include <wiringPi.h>
 
-#include "spi23x1024/spi23x1024.c"
+#include "spi23x1024.c"
 
 #define FGEN_PIN 0
 static int select_line_pin [4] = {1,2,3,4,5};  
