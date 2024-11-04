@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include "spi23x1024/spi23x1024.c"
+#include "spi23x1024.c"
 
 uint16_t img_write() {
 
