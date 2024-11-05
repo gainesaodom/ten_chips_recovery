@@ -17,7 +17,7 @@ IT AS sudo <executable-path>
 For example:
 	sudo ./a.out
 */
-
+#include <fcntl.h>
 #include <stdio.h>
 #include <errno.h>
 #include <stdint.h>
