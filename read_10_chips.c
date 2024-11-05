@@ -30,6 +30,7 @@ static int select_line_pin [4] = {1,2,3,4,5};
 char date [100];
 char file_name [132];
 char main_dir [150];
+char chip_dir [100];
 volatile int s=1;
 volatile int chip_num=1;
 
@@ -65,6 +66,7 @@ void chip_on(void)
 {
 	if (s % 100==1)
 	{
+		snprintf(chip_dir, sizeof(chip_dir), "chip_%d", chip_num);
 		if(create_and_change_directory("chip_", chip_num)!=0)
 				printf("Important error: error with creating new directory. Stop and check for errors.");
 	}
