@@ -42,7 +42,7 @@ uint16_t img_write() {
 
     fclose(file);
 
-    spi23x640_init(5000000);
+    spi_mem_init(5000000);
 	uint16_t address_idx;
 	for (address_idx = 0; address_idx <= SPI_MEM_MAX_ADDRESS; address_idx++) {
 		//printf("%x\n", address_idx);
