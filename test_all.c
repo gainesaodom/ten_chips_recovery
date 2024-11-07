@@ -26,7 +26,7 @@ Revised: 11/4/2024
 #include "spi23x1024.c"
 
 #define FGEN_PIN 0
-static int select_line_pin [4] = {1,2,3,4,5};  
+static int select_line_pin [5] = {21,22,23,24,25};  
 char date [100];
 char file_name [132];
 char main_dir [150];
