@@ -3,7 +3,7 @@
 #include "spi23x1024.c"
 #include <wiringPi.h>
 
-static int select_line_pin [4] = {1,2,3,4,5};  
+static int select_line_pin [5] = {21,22,23,24,25};  
 void change_select_pin(int chip_num) 
 {
 	for (int i = 0; i < sizeof(select_line_pin); i++) 
@@ -52,7 +52,9 @@ uint16_t img_write() {
     }
 
     fclose(file);
-
+	for (int x = 0; x <= sizeof(select_line_pin); x++)
+		pinMode(select_line_pin[x], OUTPUT);
+	
 	int chip_num;
 	for (chip_num = 1; chip_num <= 10; chip_num++)
 	{
