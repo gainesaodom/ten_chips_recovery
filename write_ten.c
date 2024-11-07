@@ -3,6 +3,7 @@
 #include "spi23x1024.c"
 #include <wiringPi.h>
 
+static int select_line_pin [4] = {1,2,3,4,5};  
 void change_select_pin(int chip_num) 
 {
 	for (int i = 0; i < sizeof(select_line_pin); i++) 
