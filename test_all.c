@@ -39,10 +39,10 @@ int check_all_cells(void)
 	
 	for (address_idx = 0; address_idx <= SPI_MEM_MAX_ADDRESS; address_idx++) {
 		//printf("%x\n", address_idx);
-		uint8_t next_value = 0;
+		uint8_t next_value = 0xFF;
 		spi_mem_write_byte(address_idx, next_value);
 		uint8_t f = spi_mem_read_byte(i);
-		if (x || f != 0) 
+		if (x && f != FF) 
 		{
 			printf("Error reading/writing at chip %d. Check its connections.", chip_num);
 			return 1;
