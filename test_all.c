@@ -55,7 +55,7 @@ void change_select_pin(int chip_num)
 {
 	for (int i = 0; i < sizeof(select_line_pin); i++) 
 	{
-        int bit = (chip_num >> i) & 1; // Extract the i-th bit of chip_num
+        int bit = (chip_num - 1 >> i) & 1; // Extract the i-th bit of chip_num
         digitalWrite(select_line_pin[i], bit); // Set the pin based on the extracted bit value	
 	}
 }
